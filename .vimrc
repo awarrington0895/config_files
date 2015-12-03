@@ -15,9 +15,10 @@ endfunc
 " Mappings
 map ; :
 nnoremap <C-n> :call NumberToggle()<cr>
+imap jj <Esc>
 
 " Settings
-set nu
+set rnu
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
