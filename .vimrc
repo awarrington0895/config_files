@@ -1,3 +1,7 @@
+
+" Initialize
+set nocompatible
+
 " Functions
 
 " Toggles relative line numbers 
@@ -11,13 +15,27 @@ function! NumberToggle()
   endif
 endfunc
 
+" Color Schemes
 
-" Mappings
+" colorscheme lucius
+" Lucius
+" colorscheme jellybeans
+
+
+" Mappings"{{{
+let mapleader=","
+let maplocalleader="\\"
 map ; :
 nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap j gj
+nnoremap k gk
 imap jj <Esc>
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>"}}}
 
-" Settings
+
+
+" Settings"{{{
 set rnu
 set tabstop=4
 set shiftwidth=4
@@ -31,4 +49,15 @@ set ignorecase
 set smartcase
 set smarttab
 set hlsearch
-set incsearch
+set incsearch"}}}
+
+
+
+" Folding Rules"{{{
+set foldenable
+set foldcolumn=2
+set foldmethod=marker
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo"}}}
+
+
+
