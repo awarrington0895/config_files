@@ -11,6 +11,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on"}}}
@@ -20,7 +23,7 @@ set nocompatible
 
 " Functions
 
-" Toggles relative line numbers 
+" Toggles relative line numbers "{{{
 function! NumberToggle()
   if(&relativenumber == 1)
     set nu
@@ -29,13 +32,13 @@ function! NumberToggle()
     set nonu
     set relativenumber
   endif
-endfunc
+endfunc"}}}
 
-" Color Schemes
+" Color Schemes"{{{
 
 " colorscheme lucius
 " Lucius
-" colorscheme jellybeans
+" colorscheme jellybeans"}}}
 
 
 
@@ -72,6 +75,7 @@ set ignorecase
 set smartcase
 set smarttab
 set hlsearch
+set laststatus=2
 set incsearch"}}}
 
 
@@ -82,5 +86,25 @@ set foldcolumn=2
 set foldmethod=marker
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo"}}}
 
+" Powerline Rules"{{{
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.crypt = '🔒'
+  let g:airline_symbols.linenr = '␊'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.notexists = '∄'
+  let g:airline_symbols.whitespace = 'Ξ'"}}}
 
 
