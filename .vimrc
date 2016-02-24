@@ -38,6 +38,7 @@ endfunc"}}}
 
 " colorscheme lucius
 " Lucius
+colorscheme darkblack
 " colorscheme jellybeans"}}}
 
 
