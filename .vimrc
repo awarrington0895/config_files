@@ -14,6 +14,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mattn/emmet-vim'
+Plugin 'jaxbot/browserlink.vim'
 
 call vundle#end()
 filetype plugin indent on"}}}
@@ -59,7 +61,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 map nt :NERDTree<cr>
 nnoremap <C-y> 2<C-y>"}}}
-
+imap ,, <C-y>,
 
 
 " Settings"{{{
@@ -77,15 +79,11 @@ set smartcase
 set smarttab
 set hlsearch
 set laststatus=2
-set incsearch"}}}
+let g:ctrlp_show_hidden = 1
+set incsearch"}}
 
 
 
-" Folding Rules"{{{
-set foldenable
-set foldcolumn=2
-set foldmethod=marker
-set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo"}}}
 
 " Powerline Rules"{{{
 if !exists('g:airline_symbols')
@@ -94,7 +92,7 @@ endif
 
 " unicode symbols
   let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
+  let g:airline_left_sep = '>'
   let g:airline_right_sep = '«'
   let g:airline_right_sep = '◀'
   let g:airline_symbols.crypt = '🔒'
