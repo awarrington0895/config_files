@@ -5,13 +5,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'surround.vim'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
+Plugin 'glench/vim-jinja2-syntax'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
@@ -106,4 +107,5 @@ endif
   let g:airline_symbols.notexists = '∄'
   let g:airline_symbols.whitespace = 'Ξ'"}}}
 
-
+" Macros
+let @j='i{% %}'
