@@ -1,7 +1,13 @@
 #!/bin/bash
 
+mv .bashrc ~/.bashrc
+
+mv .vimrc ~/.vimrc
 
 source vim_setup
 source virtualenv_setup
+
+source ~/.bashrc
+source ~/.vimrc
 
 
