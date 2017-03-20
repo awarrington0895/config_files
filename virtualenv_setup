@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Installs pip
-sudo apt-get install pip
+sudo apt-get install -y python-pip
 
 # Install virtualenv
-sudo pip install virtualenv
+sudo pip install -q virtualenv
 
 # Creates a directory to store the virtual environments
 mkdir ~/.virtualenvs
 
 # Install virtualenvwrapper
-sudo pip install virtualenvwrapper
+sudo pip install -q virtualenvwrapper
 
 # Sets up where the workon function looks for virtualenvs
 echo "export WORKON_HOME=~/.virtualenvs" >> ~/.bashrc

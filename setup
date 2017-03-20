@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+source vim_setup
+source virtualenv_setup
+
+
