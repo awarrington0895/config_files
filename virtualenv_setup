@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Installs pip
+sudo apt-get install pip
+
+# Install virtualenv
+sudo pip install virtualenv
+
+# Creates a directory to store the virtual environments
+mkdir ~/.virtualenvs
+
+# Install virtualenvwrapper
+sudo pip install virtualenvwrapper
+
+# Sets up where the workon function looks for virtualenvs
+echo "export WORKON_HOME=~/.virtualenvs" >> ~/.bashrc
+
+# Adds the virtualenvwrapper commands to the bashrc
+echo ". /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+# Chooses the directory that project_home uses to setup projects
+echo "export PROJECT_HOME=~/workspace" >> ~/.bashrc
+
